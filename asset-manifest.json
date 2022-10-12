@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Car-leasing-calculator/static/css/main.0b48a81a.css",
+    "main.js": "/Car-leasing-calculator/static/js/main.350eb028.js",
+    "static/media/Nekst-Black.ttf": "/Car-leasing-calculator/static/media/Nekst-Black.dffaebf93d38d4c41536.ttf",
+    "static/media/Gilroy-Regular.ttf": "/Car-leasing-calculator/static/media/Gilroy-Regular.fa652e766b6a85a1f9cb.ttf",
+    "static/media/Nekst-Black.woff": "/Car-leasing-calculator/static/media/Nekst-Black.f0e2921efcf1112b1749.woff",
+    "static/media/Gilroy-Regular.woff": "/Car-leasing-calculator/static/media/Gilroy-Regular.ebe86c0337572553acea.woff",
+    "index.html": "/Car-leasing-calculator/index.html",
+    "main.0b48a81a.css.map": "/Car-leasing-calculator/static/css/main.0b48a81a.css.map",
+    "main.350eb028.js.map": "/Car-leasing-calculator/static/js/main.350eb028.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0b48a81a.css",
+    "static/js/main.350eb028.js"
+  ]
+}
