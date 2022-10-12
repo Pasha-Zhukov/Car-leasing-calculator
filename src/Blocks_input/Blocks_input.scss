@@ -1,0 +1,125 @@
+@font-face {
+  font-family: 'Nekst-Black';
+  src: url(../fonts/Nekst/Nekst-Black.ttf) format('ttf'), url(../fonts/Nekst/Nekst-Black.woff) format('woff');
+  font-weight: 900;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url(../fonts/Gilroy/Gilroy-Regular.ttf) format('ttf'), url(../fonts/Gilroy/Gilroy-Regular.woff) format('woff');
+  font-weight: 400;
+}
+
+.block {
+  position: relative;
+  flex-shrink: 1;
+  &_disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+}
+.input_container {
+  position: relative;
+}
+.block_input {
+  outline: none;
+  position: relative;
+  height: 68px;
+  width: 427px;
+  border-radius: 16px;
+  background: #f3f3f4;
+  border-radius: 16px;
+  padding-left: 24px;
+  border: 2px solid #f3f3f4;
+  &__modify {
+    width: 85px;
+    height: 60px;
+  }
+}
+
+.block_title {
+  color: #575757;
+  margin-bottom: 24px;
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.block_input:focus {
+  background: white;
+  border: 2px solid #f3f3f4;
+}
+
+.block_text {
+  font-family: 'Nekst-Black';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 70px;
+  color: #575757;
+}
+
+.slidecontainer {
+  position: absolute;
+  width: 90%;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 30%);
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 2px;
+  border-radius: 5px;
+  background: #ff9514;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #ff9514;
+  cursor: pointer;
+  border: none;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #ff9514;
+  cursor: pointer;
+  border: none;
+}
+
+.percent {
+  position: absolute;
+  right: 7px;
+  padding: 15px 17px;
+  background: #ebebec;
+  border-radius: 16px;
+  outline: none;
+
+  font-family: 'Nekst-Black';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 120%;
+  text-align: right;
+  color: #575757;
+  top: 50%;
+  transform: translateY(-15%);
+}
+
+.percent_ending {
+  background: none;
+  top: 18%;
+  font-size: 30px;
+}
