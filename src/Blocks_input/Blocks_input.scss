@@ -123,3 +123,28 @@
   top: 18%;
   font-size: 30px;
 }
+@media (max-width: 575px) {
+  .block {
+    position: relative;
+    flex-shrink: 1;
+    &_disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+    width: 100%;
+  }
+  .block_input {
+    height: 68px;
+    width: 100%;
+    min-width: 100px;
+    border-radius: 16px;
+    background: #f3f3f4;
+    border-radius: 16px;
+    padding-left: 24px;
+    border: 2px solid #f3f3f4;
+    &__modify {
+      width: 45px;
+      height: 60px;
+    }
+  }
+}

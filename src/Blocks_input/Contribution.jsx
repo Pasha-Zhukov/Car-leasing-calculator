@@ -16,7 +16,12 @@ function Contribution({ setPercent, percent, initial, isLoading }) {
       <div className="input_container">
         <div className="block_input block_text ">{initial.toFixed(0)}</div>
       </div>
-      <input onChange={onChange} className="percent block_input block_input__modify" type="text" value={percent} />
+      <input
+        onChange={onChange}
+        className="percent block_input block_input__modify"
+        type="text"
+        value={percent + ' %'}
+      />
       <div className="slidecontainer">
         <input type="range" min="10" max="60" value={percent} className="slider" onChange={onChange} />
       </div>
