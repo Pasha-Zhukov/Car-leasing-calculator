@@ -1,6 +1,6 @@
 import './Blocks_input.scss';
 
-function Contribution({ setPercent, percent, initial, isLoading }) {
+function Contribution({ setPercent, percent, initial, subTitle, isLoading }) {
   const onChange = (e) => {
     if (e.target.value < 10) {
       setPercent(10);
@@ -14,7 +14,10 @@ function Contribution({ setPercent, percent, initial, isLoading }) {
     <div className={`block ${isLoading ? 'block_disabled' : ''}`}>
       <h5 className="block_title">Первоначальный взнос</h5>
       <div className="input_container">
-        <div className="block_input block_text ">{initial.toFixed(0)}</div>
+        <div className="block_input block_text ">
+          {initial}
+          {' ' + subTitle}
+        </div>
       </div>
       <input
         onChange={onChange}

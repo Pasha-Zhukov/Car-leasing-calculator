@@ -8,6 +8,13 @@
   src: url(../fonts/Gilroy/Gilroy-Regular.ttf) format('ttf'), url(../fonts/Gilroy/Gilroy-Regular.woff) format('woff');
   font-weight: 400;
 }
+
+$font-title: 'Gilroy';
+$font-main: 'Nekst-Black';
+$title-color-btn-hover: black;
+$wraper-title-color: #575757;
+$btn-color: #ff9514;
+
 * {
   padding: 0;
   margin: 0;
@@ -16,21 +23,31 @@
 
 .container {
   position: relative;
-  margin: 100px auto 0;
-  padding: 32px 48px;
-  width: 1440px;
-  background: #ffffff;
+  margin: 0 auto;
+  padding: 213px 48px 32px;
+  background: white;
 }
 .main_title {
   width: 55%;
-  font-family: 'Nekst-Black';
+  font-family: $font-main;
   font-weight: 900;
-  font-size: 54px;
-  line-height: 90%;
+  font-size: 3.4em;
+  line-height: 0.9;
   margin-bottom: 32px;
-  color: #111111;
+  color: $title-color-btn-hover;
 }
 .data_container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+  &__input {
+    margin-bottom: 44px;
+  }
+}
+.data_container__input {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -45,30 +62,21 @@
   align-items: flex-start;
   padding: 0px;
   gap: 8px;
+  &_title {
+    font-family: $font-title;
+    font-size: 1em;
+    line-height: 1.5;
+    color: $wraper-title-color;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
 }
-
-.wraper_title {
-  width: 191px;
-  height: 24px;
-  font-family: 'Gilroy';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 150%;
-  color: #575757;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-}
-
 .wraper_sum {
-  width: 279px;
-  height: 49px;
-  font-family: 'Nekst-Black';
-  font-style: normal;
+  font-family: $font-main;
   font-weight: 900;
-  font-size: 54px;
-  line-height: 90%;
+  font-size: 3.4em;
+  line-height: 0.9;
   color: #333333;
   flex: none;
   order: 1;
@@ -76,46 +84,100 @@
 }
 .btn {
   padding: 8px 16px 12px;
+  margin-bottom: -15px;
   width: 426px;
-  background: #ff9514;
+  background: $btn-color;
   border-radius: 40px;
 
-  font-family: 'Nekst-Black';
-  font-style: normal;
+  font-family: $font-main;
   font-weight: 900;
-  font-size: 30px;
-  line-height: 36px;
-  color: #ffffff;
+  font-size: 1.9em;
+  line-height: 1.2;
+  color: white;
   border: none;
 }
 
 .btn:hover {
-  background: #111111;
+  background: $title-color-btn-hover;
 }
 .btn:active {
-  background: #575757;
+  background: $wraper-title-color;
 }
-
-@media (max-width: 575px) {
+@media (max-width: 1439px) {
   .container {
-    position: relative;
+    padding: 213px 48px;
+  }
+  .btn {
+    max-width: 320px;
+    height: 68px;
+    margin-bottom: -10px;
+  }
+  .main_title {
+    width: 75%;
+    margin-bottom: 32px;
+    color: $title-color-btn-hover;
+  }
+}
+@media (max-width: 1119px) {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
     margin: 0px auto 0;
-    padding: 10px;
+    padding: 64px 36px 0px 36px;
     width: 100%;
   }
   .main_title {
     width: 100%;
-    font-size: 32px;
-    line-height: 90%;
-    margin-bottom: 20px;
+    margin-bottom: 32px;
   }
-  .data_container {
+  .data_container__input {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    gap: 32px;
-    &__input {
-      margin-bottom: 44px;
+  }
+  .data_container__btn {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .wraper_title {
+    font-size: 1.2em;
+    margin-top: 20px;
+  }
+  .wraper_sum {
+    margin-bottom: 10px;
+    &_payment:nth-child(2) {
+      padding-right: 120px;
     }
+  }
+  .wraper_sum .btn {
+    font-size: 1.9em;
+  }
+  .btn {
+    max-width: 345px;
+  }
+}
+@media (max-width: 767px) {
+  .container {
+    padding: 44px 20px 0px 20px;
+  }
+  .main_title {
+    margin-bottom: 20px;
+  }
+  .data_container__btn {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .wraper_title {
+    font-size: 1.25em;
+    margin-top: 0;
+  }
+  .wraper_sum {
+    font-size: 26px;
+    line-height: 0.9;
+    margin-bottom: 0;
+  }
+  .btn {
+    width: 280px;
+    height: 60px;
   }
 }
